@@ -1,0 +1,109 @@
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Poppins&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;700&family=IBM+Plex+Sans:wght@400;700&family=Poppins&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root { 
+    --clr-text: hsl(204,100%,1%);
+    --clr-body: hsl(204,20%,15%);
+    --clr-surface: hsl(0, 0%, 100%); 
+    --clr-primary: hsl(329, 85%, 53%);
+    --clr-secondary: hsl(208, 83%, 93%); 
+    --clr-accent: hsl(89, 85%, 33%); 
+
+
+    --ff-base: 'IBM Plex Sans', sans-serif;
+    --ff-accent: 'IBM Plex Sans Condensed', sans-serif;
+
+
+
+    /* --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.80rem);
+    --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem); */
+    --fs-300: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --fs-400: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+    --fs-500: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+    --fs-600: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+    --fs-700: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+    --fs-800: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
+}
+
+@media (prefers-color-scheme: dark) { 
+    :root { 
+        --clr-text:  hsl(0, 0%, 100%); 
+        --clr-body: hsl(204,20%,85%); 
+        --clr-surface: hsl(204,100%,1%);
+        --clr-primary: hsl(329, 85%, 53%);
+        --clr-secondary: hsl(208, 83%, 17%); 
+        --clr-accent: hsl(89, 85%, 33%); 
+    } 
+    
+}
+
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+* { 
+    margin: 0;
+}
+
+html { 
+    color-scheme: light dark ;
+}
+
+img { 
+    max-width: 100%;
+    display: block;
+}
+
+body { 
+    font-family: var(--ff-base);
+    color: var(--clr-text);
+    font-size: var(--fs-400);
+    line-height: 1.6;
+    color: var(--clr-body);
+}
+
+h1, h2, h3 { 
+    font-family: var(--ff-accent);
+    line-height: 1.1;
+    text-wrap: balance; 
+}
+
+h1 { 
+    font-size: var(--fs-700);
+    color: var(--clr-primary);
+}
+
+h2 { 
+    font-size: var(--fs-600);
+}
+
+h3 { 
+    font-size: var(--fs-500);
+    color: var(--clr-text);
+}
+a { 
+    color: var(--clr-primary);
+}
+
+a:hover, a:focus {  
+    color: var(--clr-accent);
+}
+
+::marker { 
+    color: var(--clr-primary);
+}
+
+.wrapper { 
+    width: min(100% - 3rem, 55ch);
+    margin-inline: auto;
+}
+
+.flow > * + *, 
+.flow > :where(:not(:first-child))
+{ 
+    /* background: red; */
+    margin-top: var(--flow-space, 1em);
+}
